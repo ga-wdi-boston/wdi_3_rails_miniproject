@@ -17,15 +17,19 @@ ActiveRecord::Schema.define(version: 20141009175540) do
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.string  "comments"
-    t.integer "posts_id"
+    t.string   "comment"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "comments", ["posts_id"], name: "index_comments_on_posts_id", using: :btree
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
 
   create_table "posts", force: true do |t|
-    t.string "title"
-    t.string "post"
+    t.string   "title"
+    t.string   "post"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

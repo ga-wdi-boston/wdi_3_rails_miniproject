@@ -1,8 +1,9 @@
 class CreateComments < ActiveRecord::Migration
   def change
     create_table :comments do |t|
-      t.string :comments
-      t.belongs_to :posts, index: true
+      t.string :comment
+      t.belongs_to :post, index: true
+      t.timestamps
     end
   end
 end

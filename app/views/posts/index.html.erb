@@ -1,0 +1,9 @@
+<h1> Blgo </h1>
+
+<ol>
+<% @posts.each do |d| %>
+  <li> <%= d.title %> => <%=link_to "See Whole Post", post_path(d)%></li>
+<%end%>
+</ol>
+
+
