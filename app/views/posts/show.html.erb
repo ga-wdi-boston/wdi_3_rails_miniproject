@@ -1,0 +1,13 @@
+<h1><%= @post.title %></h1>
+<div><%= @post.post %> </div>
+
+
+<h3> Comments to the post </h3>
+<ul>
+  <% @comments.each do |c| %>
+    <li> <%= c.comment %> </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Back to Front Page", posts_path %>
