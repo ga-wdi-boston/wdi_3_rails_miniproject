@@ -1,6 +1,6 @@
 class PostsController < ActionController::Base
 
-  before_action :find_post, only: [:show]
+  before_action :find_post, only: [:show, :edit, :update]
 
   def index
     @posts = Post.order(:created_at)
@@ -15,8 +15,16 @@ class PostsController < ActionController::Base
   end
 
   def create
-    @post = Post.create(comment_params)
+    @post = Post.create(post_params)
     @post.save
+    redirect_to @post
+  end
+
+  def edit
+  end
+
+  def update
+    @post.update(post_params)
     redirect_to @post
   end
 
@@ -28,7 +36,7 @@ class PostsController < ActionController::Base
     @post = Post.find(params[:id])
   end
 
-  def comment_params
+  def post_params
     params.require(:post).permit(:title, :post)
   end
 
