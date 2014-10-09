@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
     redirect_to @comment.post
   end
 
-  def destory
+  def destroy
     @comment.destroy
     redirect_to @comment.post
   end
