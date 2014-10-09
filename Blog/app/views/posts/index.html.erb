@@ -7,7 +7,6 @@
 	<p><span>Author: </span><%= post.author %></p>
 	<span><%= link_to 'Edit', edit_post_path(post) %></span>
 	<span><%= link_to 'Delete', post_path(post), method: :delete %> </span> 
-	<span><%= link_to 'Comments', comments_path %></span>
 	<hr>
 <% end %>
 

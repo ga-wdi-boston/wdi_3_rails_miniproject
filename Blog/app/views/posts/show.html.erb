@@ -5,8 +5,11 @@
 <p><%= @post.content %></p>
 
 <% @comments.each do |comment| %>
-	<p><%= comment.comment %></p>
+	<p> + <%= comment.comment %></p>
 <% end %>
+
+
+<%= render 'comments/form' %>
 
 <br>
 <%= link_to "<<Back", posts_path %>
