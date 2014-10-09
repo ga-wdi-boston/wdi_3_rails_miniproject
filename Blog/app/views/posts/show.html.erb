@@ -4,5 +4,9 @@
 
 <p><%= @post.content %></p>
 
+<% @comments.each do |comment| %>
+	<p><%= comment.comment %></p>
+<% end %>
+
 <br>
 <%= link_to "<<Back", posts_path %>
