@@ -5,7 +5,9 @@
 <% @posts.each do |post|%>
 	<p><strong><%= link_to post.title, post_path(post) %></strong></p>
 	<p><span>Author: </span><%= post.author %></p>
-	<%= link_to 'Edit', edit_post_path(post) %>  <%= link_to 'Delete', post_path(post), method: :delete %>
+	<span><%= link_to 'Edit', edit_post_path(post) %></span>
+	<span><%= link_to 'Delete', post_path(post), method: :delete %> </span> 
+	<span><%= link_to 'Comments', comments_path %></span>
 	<hr>
 <% end %>
 
