@@ -1,10 +1,12 @@
 <h1>Welcome to the Blog</h1>
 
 <h2>Posts</h2>
-
+<hr>
 <% @posts.each do |post|%>
-	<span><%= link_to 'x', method: :delete %></span><p><strong><%= link_to post.title, post_path(post) %></strong></p>
+	<span><%= link_to 'x', post_path(post), method: :delete %></span><p><strong><%= link_to post.title, post_path(post) %></strong></p>
 	<p><span>Author: </span><%= post.author %></p>
+	<%= link_to 'Edit', edit_post_path(post) %>
+	<hr>
 <% end %>
 
 <%= link_to 'New Post', new_post_path %>
