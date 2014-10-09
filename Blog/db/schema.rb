@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20141009180551) do
   create_table "posts", force: true do |t|
     t.string "title"
     t.string "author"
+    t.text   "content"
   end
 
 end
