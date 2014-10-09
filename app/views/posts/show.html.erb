@@ -5,12 +5,21 @@
 <h3> Comments to the post </h3>
 <ul>
   <% @comments.each do |c| %>
-    <li> <%= c.comment %> </li>
+    <li> <%= c.comment %> <%= link_to "edit this comment", edit_comment_path%> | <%= link_to "delete this comment", c, method: :delete, data: { confirm: 'Are you sure?' } %></li>
   <% end %>
 </ul>
+
+<%= form_for @comment do |f| %>
+  <%= f.hidden_field :post_id %>
+  <%= f.label :comment %>
+  <%= f.text_area :comment %>
+  <%= f.submit %>
+<% end %>
 
 <p>
 <%= link_to "Back to Front Page", posts_path %>
  |
 <%= link_to "Edit this Blgo Post", edit_post_path%>
+ |
+ <%= link_to 'Delete this Blgo Post', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
 </p>

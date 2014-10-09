@@ -1,6 +1,6 @@
-class PostsController < ActionController::Base
+class PostsController < ApplicationController
 
-  before_action :find_post, only: [:show, :edit, :update]
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.order(:created_at)
@@ -8,6 +8,8 @@ class PostsController < ActionController::Base
 
   def show
     @comments = @post.comments
+    @post_c = find_post
+    @comment = @post_c.comments.new
   end
 
   def new
@@ -28,7 +30,10 @@ class PostsController < ActionController::Base
     redirect_to @post
   end
 
-
+  def destroy
+    @post.destroy
+    redirect_to action: :index
+  end
 
   private
 
