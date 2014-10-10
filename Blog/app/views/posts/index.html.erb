@@ -1,13 +1,26 @@
-<h1>Welcome to the Blog</h1>
-
-<h2>Posts</h2>
-<hr>
-<% @posts.each do |post|%>
-	<p><strong><%= link_to post.title, post_path(post) %></strong></p>
-	<p><span>Author: </span><%= post.author %></p>
-	<span><%= link_to 'Edit', edit_post_path(post) %></span>
-	<span><%= link_to 'Delete', post_path(post), method: :delete %> </span> 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cenk's Blog</title>
+</head>
+<body>
+	<h1>Welcome to Cenk's Blog</h1>
+	
+	<h2>Posts</h2>
 	<hr>
-<% end %>
+	<% @posts.each do |post|%>
+		<p><strong><%= link_to post.title, post_path(post), class: 'title' %></strong></p>
+		<p><span>Author: </span><%= post.author %></p>
+		<span><%= link_to 'Edit', edit_post_path(post), class: 'actions' %></span>
+		<span><%= link_to 'Delete', post_path(post), method: :delete, class: 'actions' %> </span> 
+		<hr>
+	<% end %>
+	
+	<%= link_to 'New Post', new_post_path, class: 'actions' %>
+</body>
+</html>
 
-<%= link_to 'New Post', new_post_path %>
+
+
+
+	

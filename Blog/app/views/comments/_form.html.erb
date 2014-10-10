@@ -1,6 +1,6 @@
 <%= form_for @comment do |f| %>
 	<%= f.hidden_field :post_id %>
-	<%= f.text_area :comment, size: '50x10' %>
+	<%= f.text_area :comment, size: '50x10', id: 'textarea' %>
 	<br>
-	<%= f.submit 'Comment' %>
+	<%= f.submit 'Comment', class: 'button' %>
 <% end %>
