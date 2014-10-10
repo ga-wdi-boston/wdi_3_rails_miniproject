@@ -10,6 +10,9 @@ class CommentsController < ApplicationController
   def edit
   end
 
+  def show
+  end
+
   def update
     @comment.update(comment_params)
     redirect_to @comment.post

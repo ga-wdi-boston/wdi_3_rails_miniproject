@@ -5,7 +5,7 @@
 <h3> Comments to the post </h3>
 <ul>
   <% @comments.each do |c| %>
-    <li> <%= c.comment %> <%= link_to "edit this comment", edit_comment_path%> | <%= link_to "delete this comment", comment_path(c), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <li> <%= c.comment %> <%= link_to "edit this comment", edit_comment_path%> | <%= link_to "delete this comment", comment_path(c), method: :delete, data: { confirm: 'Are you sure?' } %> | <%= link_to "view comment", comment_path %></li>
   <% end %>
 </ul>
 
