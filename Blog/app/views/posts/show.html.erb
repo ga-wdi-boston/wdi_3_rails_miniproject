@@ -1,9 +1,11 @@
+<!-- page for showing the posts and comments associated with it. -->
+
 <h1><%= @post.title %></h1>
 
 <h2><%= @post.author %></h2>
 
 <p><%= @post.content %></p>
-
+<!-- iterates through all the comments for specific posts and displays it on the browser -->
 <% @comments.each do |comment| %>
 	<p> + <%= comment.comment %></p> 
 	<%= link_to 'Delete', comment_path(comment), method: :delete, class: 'actions' %>

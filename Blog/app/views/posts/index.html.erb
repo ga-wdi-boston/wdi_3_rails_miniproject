@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- index page for the posts -->
 <html>
 <head>
 	<title>Cenk's Blog</title>
@@ -8,6 +9,7 @@
 	
 	<h2>Posts</h2>
 	<hr>
+	<!-- it iterates th=orug all posts and shows on the webpage -->
 	<% @posts.each do |post|%>
 		<p><strong><%= link_to post.title, post_path(post), class: 'title' %></strong></p>
 		<p><span>Author: </span><%= post.author %></p>
