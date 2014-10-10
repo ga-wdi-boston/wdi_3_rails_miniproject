@@ -5,7 +5,8 @@
 <p><%= @post.content %></p>
 
 <% @comments.each do |comment| %>
-	<p> + <%= comment.comment %></p>
+	<p> + <%= comment.comment %></p> 
+	<%= link_to 'Delete', comment_path(comment), method: :delete %>
 <% end %>
 
 
