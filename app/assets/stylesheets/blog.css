@@ -12,10 +12,18 @@ header {
 	border: 1px solid black;
 }
 
-header h1, div#wrapper h2 {
+header h1 {
 	color: #A42020;
 	font-family: "Edwardian Script ITC";
 	margin: 0px;
+}
+
+h2#articles {
+	text-align: center;
+	color: #A42020;
+	font-family: "Edwardian Script ITC";
+	font-size: 30px;
+	margin: 0px 60px 0px 0px;
 }
 
 div#wrapper {
@@ -28,11 +36,7 @@ div#wrapper {
 	color: white;
 	text-decoration: none;
 	padding: 3px 5px;
-}
-
-.actions:hover {
-	background-color: #A00000;
-	cursor: pointer;
+	float: left;
 }
 
 .title {
@@ -47,13 +51,35 @@ div#wrapper {
 	padding: 6px 17px;
 	font-size: 12px;
 	margin: 10px;
-}
-
-.button:hover {
-	background-color: #A00000;
-	cursor: pointer;
+	text-decoration: none;
 }
 
 #textarea {
 	margin: 8px;
+}
+
+.form {
+	margin: 50px 20% 0px 20%;
+}
+
+.entry {
+	padding: 10px;
+}
+
+h1#title {
+	color: #A00000;
+}
+
+.delete {
+	float: right;
+	border: 1px solid #A00000;
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	padding: 3px 5px;
+}
+
+.actions:hover, .delete:hover, .button:hover {
+	background-color: #A00000;
+	cursor: pointer;
 }

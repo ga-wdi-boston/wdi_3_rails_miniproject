@@ -6,10 +6,12 @@
 </head>
 <body>
 	<header>
-		<h1>Served<h1>
+		<h1>Cengo's Blog<h1>
 	</header>
+
 	<div id="wrapper">
-		<h2>Posts</h2>
+		<%= link_to 'New Post', new_post_path, class: 'actions' %>
+		<h2 id="articles">Articles</h2>
 		<section>
 			<hr>
 			<!-- it iterates th=orug all posts and shows on the webpage -->
@@ -17,12 +19,11 @@
 				<p><strong><%= link_to post.title, post_path(post), class: 'title' %></strong></p>
 				<p><span>Author: </span><%= post.author %></p>
 				<span><%= link_to 'Edit', edit_post_path(post), class: 'actions' %></span>
-				<span><%= link_to 'Delete', post_path(post), method: :delete, class: 'actions' %> </span> 
+				<span><%= link_to 'Delete', post_path(post), method: :delete, class: 'delete' %> </span>
+				<br><br> 
 				<hr>
 			<% end %>
 		</section>
-		
-		<%= link_to 'New Post', new_post_path, class: 'actions' %>
 	</div>
 </body>
 </html>
