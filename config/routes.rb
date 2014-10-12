@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'users/register' => 'users#register'
+
+  resources :users, only: :create
+
   resources :posts
 
   resources :comments
