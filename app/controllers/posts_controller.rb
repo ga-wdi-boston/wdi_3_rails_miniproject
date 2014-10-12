@@ -17,7 +17,11 @@ class PostsController < ApplicationController
 	# creates a post
 	def create
 		@post = Post.create(post_params)
-		redirect_to posts_path
+		if @post.save
+			redirect_to posts_path 
+		else
+			render :new 
+		end
 	end
 
 	def edit
@@ -25,7 +29,11 @@ class PostsController < ApplicationController
 	# updates a post
 	def update
 		@post.update(post_params)
-		redirect_to post_path(@post)
+		if @post.update(post_params)
+			redirect_to post_path(@post)
+		else
+			render :edit
+		end
 	end
 	# deletes a post
 	def destroy
