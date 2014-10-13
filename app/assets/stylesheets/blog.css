@@ -44,6 +44,17 @@ h2#articles {
 	margin: 0px 60px 0px 0px;
 }
 
+div#wrapper2 {
+	padding: 50px;
+	text-align: center;
+	color: #A42020;
+	background-color: #E8E8E8;
+	border: 1px solid black;
+	border-radius: 3px;
+	margin: 80px 10% 0px 10%;
+	padding: 20px 0px 20px 0px;
+}
+
 div#wrapper {
 	padding: 50px;
 }
