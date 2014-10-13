@@ -11,6 +11,10 @@ class CommentsController < ApplicationController
   end
 
   def show
+    @subcomments = @comment.subcomments
+    @comment_sub = find_comment
+    @subcomment = @comment_sub.subcomments.new
+
   end
 
   def update

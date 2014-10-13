@@ -1,0 +1,7 @@
+<%= form_for @subcomment do |f| %>
+  <%= f.label :subcomment %>
+  <%= f.text_field :subcomment %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "back to comment", @subcomment.comment %>

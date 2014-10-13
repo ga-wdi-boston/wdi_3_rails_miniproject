@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20141013215824) do
   end
 
   create_table "subcomments", force: true do |t|
-    t.string   "comment"
+    t.string   "subcomment"
     t.integer  "comment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
