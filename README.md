@@ -10,3 +10,4 @@ Remember to make lots of git commits with helpful commit messages! Making lots o
 
 Please deploy your code to Heroku and then submit a pull request. In your pull request message, paste in your Heroku URL (otherwise we have no idea where to look for it). 
 
+http://desolate-brushlands-2715.herokuapp.com/students
