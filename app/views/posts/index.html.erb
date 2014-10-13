@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- index page for the posts -->
+<html>
+<head>
+	<title>Blog of Luxury</title>
+</head>
+<body>
+	<header>
+		<h1>Blog of Luxury</h1>
+	</header>
+	<div id="wrapper2">
+		<h1>Welcome to the Luxury</h1>
+		<h2>The Best Blog to get involved in Luxurious Lifestyle</h2>
+	</div>
+
+	<div id="wrapper">
+		<%= link_to 'New Post', new_post_path, class: 'actions' %>
+		<h2 id="articles">Articles</h2>
+		<section>
+			<hr>
+			<!-- it iterates th=orug all posts and shows on the webpage -->
+			<% @posts.each do |post|%>
+				<p><strong><%= link_to post.title, post_path(post), class: 'title' %></strong></p>
+				<p><span>Author: </span><%= post.author %></p>
+				<span><%= link_to 'Edit', edit_post_path(post), class: 'actions' %></span>
+				<span><%= link_to 'Delete', post_path(post), method: :delete, class: 'delete' %> </span>
+				<br><br> 
+				<hr>
+			<% end %>
+		</section>
+	</div>
+</body>
+</html>
+
+
+
+
+	
