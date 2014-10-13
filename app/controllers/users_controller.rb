@@ -1,6 +1,14 @@
 class UsersController < ApplicationController
 
-	def register
+	def index
+		@users = User.all
+	end
+
+	def login
+		@user = User.find(user_params)
+	end
+
+	def new
 		@user = User.new
 	end
 
