@@ -22,7 +22,12 @@
 	
 		<div class="entry">
 			<%= f.label :password, 'Pasword: ' %>
-			<%= f.text_field :password, size: '40' %>
+			<%= f.password_field :password, size: '40' %>
+		</div>
+
+		<div class="entry">
+			<%= f.label :password_confirmation, 'Confirm Pasword: ' %>
+			<%= f.password_field :password_confirmation, size: '40' %>
 		</div>
 	
 		<%= f.submit 'Register', class: 'button' %>
