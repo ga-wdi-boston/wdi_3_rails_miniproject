@@ -15,11 +15,15 @@ header {
 }
 
 header h1 {
-	color: #E8E8E8;
-	font-family: "Times New Roman";
 	margin: 0px;
 	padding: 10px;
 	font-size: 16px;
+}
+
+.headline {
+	text-decoration: none;
+	color: #E8E8E8;
+	font-family: "Times New Roman";
 }
 
 h2#articles {
