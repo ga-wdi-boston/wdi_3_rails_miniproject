@@ -1,7 +1,13 @@
-<%= form_for @subcomment do |f| %>
-  <%= f.label :subcomment %>
-  <%= f.text_field :subcomment %>
-  <%= f.submit %>
-<% end %>
+<header>
+  <h1> Blgo. </h1>
+</header>
 
-<%= link_to "back to comment", @subcomment.comment %>
+<div class="subcomment">
+  <%= form_for @subcomment do |f| %>
+    <%= f.label :subcomment %><br>
+    <%= f.text_field :subcomment %><br>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+<nav><%= link_to "back to comment", @subcomment.comment %></nav>
