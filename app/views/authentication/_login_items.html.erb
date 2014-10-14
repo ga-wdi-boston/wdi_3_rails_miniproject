@@ -6,7 +6,7 @@
 <% end %>
 <!-- checks if the user is signed in or not, if the user is signed in it direct ot the path of editing the registration information -->
 <% if user_signed_in? %>
-	<div><%= link_to 'User Settings', edit_user_registration_path, class: 'register' %></div>
+	<div><%= link_to current_user.email, edit_user_registration_path, class: 'register' %></div>
 <% else %>
 	<div><%= link_to 'Register', new_user_registration_path, class: 'register' %></div>
 <% end %>

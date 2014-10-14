@@ -14,21 +14,34 @@
       </ul>
     </div>
   <% end %>
-	<div class="entry">
-		<%= f.label :title, 'Title:' %>
-		<%= f.text_field :title, size: '50' %>
-	</div>
-	
-	<div class="entry">
-		<%= f.label :author, 'Author:' %>
-		<%= f.text_field :author, size: '47' %>
-	</div>
-	
-	<div class="entry">
-		<%= f.text_area :content, size: '50x10'%>
-	</div>
-	
-	<%= f.submit 'Post', class: 'button' %>
+  <table colspan='2'>
+  	<thead></thead>
+  	<tbody>
+  		<tr>
+  			<td>Title: </td>
+  		</tr>
+  		<tr>
+  			<td class="entry">
+					<%= f.text_field :title, size: '50' %>
+				</td>
+  		</tr>
+  		<tr>
+  			<td>Author: </td>
+  		</tr>
+  		<tr>
+				<td class="entry">
+					<%= f.text_field :author, size: '50' %>
+				</td>
+  		</tr>
+  		<tr>
+  			<td class="entry">
+					<%= f.text_area :content, size: '60x10'%>
+  			</td>
+  		</tr>
+  		<tr><td colspan='2' class="entry"><%= f.submit 'Post', class: 'button' %></td></tr>
+  	</tbody>
+  </table>
+		
 	
 	<% end %>	
 
