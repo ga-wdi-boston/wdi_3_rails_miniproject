@@ -14,15 +14,30 @@
  *= require_self
  */
 
+
 * {
-  background-color: rgb(25,100,150);
-  font-family: "Georgia";
+  background-color: rgb(65,140,190);
 }
 
 header {
   color: white;
+  font-family: cursive;
 }
+
 
 div {
   color: white;
+  font-family: "Georgia";
+  display: inline;
+}
+
+div#index li {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size:  25px;
+}
+
+nav {
+  color: whites;
+  font-family: "Georgia";
 }

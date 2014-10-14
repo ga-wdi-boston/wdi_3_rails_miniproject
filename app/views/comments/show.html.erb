@@ -2,11 +2,12 @@
   <h1> Blgo. </h1>
 </header>
 
-<h3>Comment: <%=@comment.comment%></h3>
 
-<p>Subcomments on this comment:</p>
 
 <div class="subcomment">
+  <h3>Comment: <%=@comment.comment%></h3>
+
+  <p>Subcomments on this comment:</p>
   <ul>
     <% @subcomments.each do |c| %>
     <li> <%= c.subcomment %> <%= link_to "edit this subcomment", edit_subcomment_path(c)%> | <%= link_to "delete this subcomment", subcomment_path(c), method: :delete, data: {confirm: "are you sure?" }%> </li>
