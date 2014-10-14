@@ -3,4 +3,5 @@ class Post < ActiveRecord::Base
 	validates :title, presence: true, on: :create
 	validates :author, presence: true, on: :create
 	validates :content, presence: true, on: :create
+	belongs_to :users
 end

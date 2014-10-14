@@ -22,9 +22,10 @@
 			<% @posts.each do |post| %>
 				<p><strong><%= link_to post.title, post_path(post), class: 'title' %></strong></p>
 				<p><span>Author: </span><%= post.author %></p>
-				<span><%= link_to 'Edit', edit_post_path(post), class: 'actions' %></span>
-				<span><%= link_to 'Delete', post_path(post), method: :delete, class: 'delete' %> </span>
-				<br><br> 
+						<span><%= link_to 'Edit', edit_post_path(post), class: 'actions' %></span>
+						<span><%= link_to 'Delete', post_path(post), method: :delete, class: 'delete' %> </span>
+						<br><br> 
+				<% end %>
 				<hr>
 			<% end %>
 		</section>
