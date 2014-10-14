@@ -1,0 +1,34 @@
+<header>
+  <h1> Blgo. </h1>
+</header>
+
+<div class="post">
+  <h3>Title: <%= @post.title %></h3>
+  <p><%= @post.post %> </p>
+</div>
+
+<div class="comments">
+  <h3> Comments to the post </h3>
+  <ul>
+    <% @comments.each do |c| %>
+      <li> <%= c.comment %> <%= link_to "edit this comment", edit_comment_path(c)%> | <%= link_to "delete this comment", comment_path(c), method: :delete, data: { confirm: 'Are you sure?' } %> | <%= link_to "view comment", comment_path(c) %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="commentinput">
+  <%= form_for @comment do |f| %>
+    <%= f.hidden_field :post_id %>
+    <%= f.label :comment %> <br>
+    <%= f.text_area :comment, size: "50x10" %> <br>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+<nav>
+<%= link_to "Back to Front Page", posts_path %>
+ |
+<%= link_to "Edit this Blgo Post", edit_post_path%>
+ |
+ <%= link_to 'Delete this Blgo Post', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+</nav>

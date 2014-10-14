@@ -1,0 +1,15 @@
+<header>
+  <h1> Blgo. <br> Habitat for the best blog posts  </h1>
+</header>
+
+<div id="index">
+  <ol>
+  <% @posts.each do |d| %>
+    <li> <%= d.title %>     -->     <%=link_to "See Whole Post", post_path(d)%></li>
+  <%end%>
+  </ol>
+</div>
+
+<nav><%= link_to "Create new Blgo Post", new_post_path %></nav>
+
+

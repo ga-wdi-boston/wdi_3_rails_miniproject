@@ -1,0 +1,29 @@
+<header>
+  <h1> Blgo. </h1>
+</header>
+
+
+
+<div class="subcomment">
+  <h3>Comment: <%=@comment.comment%></h3>
+
+  <p>Subcomments on this comment:</p>
+  <ul>
+    <% @subcomments.each do |c| %>
+    <li> <%= c.subcomment %> <%= link_to "edit this subcomment", edit_subcomment_path(c)%> | <%= link_to "delete this subcomment", subcomment_path(c), method: :delete, data: {confirm: "are you sure?" }%> </li>
+    <%end%>
+  </ul>
+</div>
+
+
+<div class="commentinput">
+  <%= form_for @subcomment do |f| %>
+    <%=f.hidden_field :comment_id %>
+    <%= f.label :subcomment %><br>
+    <%=f.text_area :subcomment, size: "50x10"  %><br>
+    <%= f.submit %>
+  <%end%>
+</div>
+
+
+<nav><%=link_to "Back to Post", @comment.post %></nav>

@@ -1,0 +1,18 @@
+<header>
+  <h1> Blgo. </h1>
+  <h3>Create a new post.</h3>
+</header>
+
+<div class="post">
+  <%= form_for @post do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %> <br>
+
+    <%= f.label :post %>
+    <%= f.text_area :post, size: "95x20" %><br>
+    <%= f.submit %>
+  <%end%>
+</div>
+
+<nav><%= link_to "Back to Home Page", posts_path %></nav>
