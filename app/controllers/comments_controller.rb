@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 	# It creates a comment and afterwards redirect to back
+	before_action :authenticate_user!
 	def create
 		@comment = Comment.create(comment_params)
 		redirect_to :back
