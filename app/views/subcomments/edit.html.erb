@@ -2,10 +2,10 @@
   <h1> Blgo. </h1>
 </header>
 
-<div class="subcomment">
+<div class="commentinput">
   <%= form_for @subcomment do |f| %>
     <%= f.label :subcomment %><br>
-    <%= f.text_field :subcomment %><br>
+    <%= f.text_area :subcomment, size: "50x10"  %><br>
     <%= f.submit %>
   <% end %>
 </div>

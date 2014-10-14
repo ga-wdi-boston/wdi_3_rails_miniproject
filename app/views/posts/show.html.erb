@@ -16,11 +16,11 @@
   </ul>
 </div>
 
-<div class="form">
+<div class="commentinput">
   <%= form_for @comment do |f| %>
     <%= f.hidden_field :post_id %>
     <%= f.label :comment %> <br>
-    <p><%= f.text_area :comment %> <br></p>
+    <%= f.text_area :comment, size: "50x10" %> <br>
     <%= f.submit %>
   <% end %>
 </div>

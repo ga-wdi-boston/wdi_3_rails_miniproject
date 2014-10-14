@@ -41,3 +41,12 @@ nav {
   color: whites;
   font-family: "Georgia";
 }
+
+.commentinput input{
+  background-color: white;
+}
+
+.post input {
+  background-color: white;
+}
+
