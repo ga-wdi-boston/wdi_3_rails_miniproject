@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	# it runs the set_post method before the page loads , only for the specified methods
 	before_action :set_post, only: [:show, :edit, :update, :destroy]
-	before_action :authenticate_user!, except: [:index, :show]
+	before_action :authenticate_user!, except: [:index]
 	# index method to declare the all posts.
 	def index
 		@posts = Post.all
