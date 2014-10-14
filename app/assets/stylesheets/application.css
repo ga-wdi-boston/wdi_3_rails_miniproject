@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  background-color: rgb(25,100,150);
+  font-family: "Georgia";
+}
+
+header {
+  color: white;
+}
+
+div {
+  color: white;
+}
