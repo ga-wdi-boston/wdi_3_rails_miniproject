@@ -43,7 +43,7 @@ class PostsController < ApplicationController
 	end
 
 	private
-		# finds a pst object with the right paramteres
+		# finds a post object with the right paramteres
 		def set_post
 			@post = Post.find(params[:id])
 		end

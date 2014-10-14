@@ -1,12 +1,12 @@
 <!-- checks if the user is signed in or not, if the user signed in, it directs the user destroy session path if the user wants to logout -->
 <% if user_signed_in? %>
-	<div><%= link_to 'Logout', destroy_user_session_path, method: :delete %></div>
+	<div><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'log_button'  %></div>
 <% else %>
-	<div><%= link_to 'Login', new_user_session_path %></div>
+	<div><%= link_to 'Login', new_user_session_path, class: 'log_button'  %></div>
 <% end %>
 <!-- checks if the user is signed in or not, if the user is signed in it direct ot the path of editing the registration information -->
 <% if user_signed_in? %>
-	<div><%= link_to 'User Settings', edit_user_registration_path %></div>
+	<div><%= link_to 'User Settings', edit_user_registration_path, class: 'register' %></div>
 <% else %>
-	<div><%= link_to 'Register', new_user_registration_path %></div>
+	<div><%= link_to 'Register', new_user_registration_path, class: 'register' %></div>
 <% end %>
