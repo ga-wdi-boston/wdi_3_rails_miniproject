@@ -1,0 +1,21 @@
+
+<table>
+  <tbody>
+    <% @topics.each do |topic| %>
+      <tr>
+        <td class="space"><h4><%= link_to topic.question, topic_path(topic) %></h4></td>
+        <td class="space"><%= topic.name %></td>
+        <td class="space"><%= topic.comments.count %> comments</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div id="add_topic" class="btn btn-warning">
+  <%= link_to 'Add Your Question', new_topic_path %>
+</div>
+
+
+

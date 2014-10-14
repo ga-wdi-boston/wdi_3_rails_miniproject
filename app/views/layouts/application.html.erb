@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HowDoIDesign Forum</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div style="font-family: 'Monoton', cursive;" class="navbar navbar-fixed-top">
+  <%= nav_bar :brand => "How Do I Design" %>
+</div>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+
+</body>
+</html>
