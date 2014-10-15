@@ -22,7 +22,7 @@
 			<% @posts.each do |post| %>
 				<p><strong><%= link_to post.title, post_path(post), class: 'title' %></strong></p>
 				<p><span>Author: </span><%= post.author %></p>
-				<% if post.user == current_user %>
+				<% if post.user == current_user && user_signed_in? %>
 					<span><%= link_to 'Edit', edit_post_path(post), class: 'actions' %></span>
 					<span><%= link_to 'Delete', post_path(post), method: :delete, class: 'delete' %> </span>
 					<br><br> 
