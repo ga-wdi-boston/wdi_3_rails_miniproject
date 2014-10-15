@@ -1,0 +1,16 @@
+<h1>Editing <%= @character.name %> (<%= @character.job %>)</h1>
+
+<%= form_for @character do |f| %>
+  <%= f.hidden_field :party_id, value: @character.party.id %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :job %>
+  <%= f.select(:job, @character.job_choices) %>
+
+  <%= f.label :profile %>
+  <%= f.text_area :profile %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Cancel", character_path(@character.id) %>

@@ -1,0 +1,25 @@
+<h1><%= @party.name %></h1>
+
+<h2>"<%= @party.motto %>"</h2>
+
+<p>Party lead: <%= @party.user %></p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Job</th>
+    <th></th>
+  </tr>
+
+  <% @party.characters.each do |character| %>
+  <tr>
+    <td><%= link_to character.name, character_path(character.id) %></td>
+    <td><%= character.job %></td>
+    <td><%= link_to "Dismiss", character_path(character.id), method: :delete %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= render 'character_form' %>
+
+<%= link_to "Party Overview", root_path %>

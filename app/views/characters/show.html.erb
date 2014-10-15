@@ -1,0 +1,29 @@
+<h1><%= @character.name %> (<%= @character.job %>)</h1>
+
+<table>
+  <tr>
+    <th>HP</th>
+    <th>SP</th>
+    <th>Attack</th>
+    <th>Defense</th>
+    <th>Speed</th>
+  </tr>
+
+  <tr>
+    <% @character.stats.each do |stat| %>
+    <td><%= stat %></td>
+    <% end %>
+  </tr>
+</table>
+
+<h2>Profile</h2>
+
+<p>
+  <% if @character.profile %>
+  <%= @character.profile %>
+  <% else %>
+  This character remains silent when you ask them about themselves.
+  <% end %> 
+</p>
+
+<%= link_to "Edit character", edit_character_path(@character.id) %>
