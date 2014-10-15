@@ -1,0 +1,7 @@
+<!-- form for adding a comment to the post  -->
+<%= form_for @comment do |f| %>
+	<%= f.hidden_field :post_id %>
+	<%= f.text_area :comment, size: '50x10', id: 'textarea' %>
+	<br>
+	<%= f.submit 'Comment', class: 'button' %>
+<% end %>
