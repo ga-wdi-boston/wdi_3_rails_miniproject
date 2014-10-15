@@ -29,6 +29,10 @@ class PostsController < ApplicationController
 	end
 	# updates a post
 	def update
+		if @post.user != current_user
+			redirect_to posts_path
+		end
+
 		@post.update(post_params)
 		if @post.update(post_params)
 			redirect_to post_path(@post)
